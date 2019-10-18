@@ -9,6 +9,9 @@ public class RadioHorizonCalculator : MonoBehaviour
     public InputField velocityField;
     public InputField d1Field;
     public InputField d2Field;
+    public InputField heightOfAntennaTransmitterField;
+    public InputField heightOfAntennaReceiverField;
+
 
     public Text resultText;
 
@@ -16,6 +19,8 @@ public class RadioHorizonCalculator : MonoBehaviour
     private string velocity;
     private string distance1;
     private string distance2;
+    private string heightOfAntennaTransmitter;
+    private string heightOfAntennaReceiver;
 
     private double dT;
     private double time;
@@ -26,18 +31,23 @@ public class RadioHorizonCalculator : MonoBehaviour
         velocity = velocityField.text;
         distance1 = d1Field.text;
         distance2 = d2Field.text;
+        heightOfAntennaTransmitter = heightOfAntennaTransmitterField.text;
+        heightOfAntennaReceiver = heightOfAntennaReceiverField.text;
 
         dT = calculateDT(double.Parse(distance1), double.Parse(distance2));
         time = calculateTime(dT, double.Parse(velocity));
-        double result =  calculateRadioHorizon(double.Parse(velocity), double.Parse(altitude), time);
 
-        Debug.Log("result is" + result);
-        resultText.text = "result is" + result;
+
+        double result =  calculateRadioHorizon(double.Parse(heightOfAntennaTransmitter), double.Parse(heightOfAntennaReceiver));
+
+        string strResult = $"Result of radio horizon is {result} miles / {result *  1.609} kilometer, time: {time} hr, distance travelled: {dT} miles";
+        Debug.Log(strResult);
+        resultText.text = strResult;
     }
 
-    public double calculateRadioHorizon(double velocity, double altitude, double time)
+    public double calculateRadioHorizon(double heightOfAntennaTransmitter, double heightOfAntennaReceiver)
     {
-        return (Mathf.Sqrt(2) * altitude) + (Mathf.Sqrt(2) * time);
+        return (Mathf.Sqrt(2) * heightOfAntennaTransmitter) + (Mathf.Sqrt(2) * heightOfAntennaReceiver);
     }
 
     private double calculateTime(double distance, double velocity)
