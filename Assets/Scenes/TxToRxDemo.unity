@@ -351,6 +351,7 @@ GameObject:
   - component: {fileID: 211347613}
   - component: {fileID: 211347612}
   - component: {fileID: 211347615}
+  - component: {fileID: 211347616}
   m_Layer: 0
   m_Name: Camera
   m_TagString: MainCamera
@@ -416,7 +417,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 211347611}
   m_LocalRotation: {x: 0.0376684, y: -0.7032368, z: 0.033507932, w: 0.709166}
-  m_LocalPosition: {x: 661.2192, y: 38.50033, z: 110.5}
+  m_LocalPosition: {x: 889, y: 142, z: 110}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -434,8 +435,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a451b40be4e754a4d94877d10447dc44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Y_ANGLE_MIN: 30
+  Y_ANGLE_MAX: 120
   lookAt: {fileID: 0}
   camTransform: {fileID: 211347614}
+  distance: 60
+  sensitivityX: 4
+  sensitivityY: 1
+--- !u!114 &211347616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 211347611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a451b40be4e754a4d94877d10447dc44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Y_ANGLE_MIN: 10
+  Y_ANGLE_MAX: 90
+  lookAt: {fileID: 318451971}
+  camTransform: {fileID: 211347614}
+  distance: 600
+  sensitivityX: 5
+  sensitivityY: 5
 --- !u!1 &219185254
 GameObject:
   m_ObjectHideFlags: 0
@@ -955,7 +980,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.3458068, g: 0.9607843, b: 0.21176468, a: 1}
+      maxColor: {r: 0.365874, g: 0.6901961, b: 0.2627451, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -1542,7 +1567,7 @@ ParticleSystem:
       speed:
         serializedVersion: 2
         minMaxState: 0
-        scalar: 6
+        scalar: 3
         minScalar: 1
         maxCurve:
           serializedVersion: 2
@@ -5376,13 +5401,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 318451968}
-  m_LocalRotation: {x: 0.47692615, y: 0.5128956, z: -0.4939829, w: 0.51522857}
-  m_LocalPosition: {x: -36, y: 574, z: 656}
+  m_LocalRotation: {x: 0.6860708, y: 0.7258517, z: 0.028010031, w: -0.040763687}
+  m_LocalPosition: {x: 10.1, y: 10.3, z: 498.6}
   m_LocalScale: {x: 4.362816, y: 1.6566, z: 35.449463}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: -266.538, y: -108.298996, z: 160.857}
+  m_LocalEulerAnglesHint: {x: -174.457, y: 1.193985, z: 266.714}
 --- !u!1 &345840480
 GameObject:
   m_ObjectHideFlags: 0
@@ -5761,7 +5786,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!199 &441354335
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -10459,7 +10484,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!199 &453171805
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -17482,7 +17507,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1914236676
 MonoBehaviour:
   m_ObjectHideFlags: 0
