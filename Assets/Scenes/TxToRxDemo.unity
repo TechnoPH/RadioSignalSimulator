@@ -773,7 +773,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 318451968}
   serializedVersion: 6
-  lengthInSec: 5
+  lengthInSec: 100
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -848,7 +848,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 10
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -1333,7 +1333,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 1000000
+    maxNumParticles: 100000
     size3D: 0
     rotation3D: 1
     gravityModifier:
@@ -1393,7 +1393,7 @@ ParticleSystem:
     serializedVersion: 6
     enabled: 1
     type: 4
-    angle: 70
+    angle: 80
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 0
@@ -1479,7 +1479,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 206.45457
+      value: 5
       mode: 0
       spread: 0
       speed:
@@ -1537,12 +1537,12 @@ ParticleSystem:
           m_RotationOrder: 4
     arc:
       value: 360
-      mode: 2
+      mode: 1
       spread: 0
       speed:
         serializedVersion: 2
         minMaxState: 0
-        scalar: 1
+        scalar: 6
         minScalar: 1
         maxCurve:
           serializedVersion: 2
@@ -5377,7 +5377,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 318451968}
   m_LocalRotation: {x: 0.47692615, y: 0.5128956, z: -0.4939829, w: 0.51522857}
-  m_LocalPosition: {x: -18.780804, y: 128.8, z: 95.7}
+  m_LocalPosition: {x: -36, y: 574, z: 656}
   m_LocalScale: {x: 4.362816, y: 1.6566, z: 35.449463}
   m_Children: []
   m_Father: {fileID: 0}
